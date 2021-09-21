@@ -1,7 +1,40 @@
-<p>movie-card works!</p>
-<mat-card *ngFor="let movie of movies; let i=index;">
-    <mat-dialog-content>
-        <mat-card-title>{{movie.Title}}</mat-card-title>
-        <mat-card-subtitle><img src={{movie.ImagePath}} /></mat-card-subtitle>
-    </mat-dialog-content>
-</mat-card>
+<h1 style="margin: 5%;">Movies</h1>
+
+<div class="cards" style="display: flex;">
+    <header>
+    </header>
+    <mat-card *ngFor="let movie of movies;" style="margin: 10px;">
+        <mat-card-header>
+            <mat-card-title>{{movie.Title}}</mat-card-title>
+            <mat-card-subtitle>Directed by: {{movie.Director.Name}}</mat-card-subtitle>
+        </mat-card-header>
+        <img src={{movie.ImagePath}} height="250" width="155" alt={{movie.Title}} />
+        <mat-card-actions style="color: black">
+            <button mat-button style="color: black" (click)="openGenreDialog(movie.Genre.Name, movie.Genre.Description)"
+                color="primary">
+                Genre
+            </button>
+            <button mat-button
+                (click)="openDirectorDialog(movie.Director.Name, movie.Director.Bio, movie.Director.Birth)"
+                style="color: black">
+                Director
+            </button>
+            <button mat-button (click)="openDescriptionDialog(movie.Title, movie.Description)" style="color: black">
+                Synopsis
+            </button>
+            <button mat-icon-button (click)="addToUserFavorites(movie._id, movie.Title)">
+                <mat-icon>favorite</mat-icon>
+            </button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+<div>
+    <div class="styleButton">
+        <button mat-button (click)='openUserDialog()'>
+            User Profile
+        </button>
+        <button mat-button (click)='logOut()'>
+            Log Out
+        </button>
+    </div>
+</div>

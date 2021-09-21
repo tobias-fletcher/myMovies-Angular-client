@@ -1,0 +1,11 @@
+<div>
+    <mat-card *ngFor="let movie of favorites">
+        <mat-card-header>
+            <mat-card-title>Title: {{movie.Title}}</mat-card-title>
+            <mat-card-subtitle style="color:#807e9b">Directed by: {{movie.Director.Name}} </mat-card-subtitle>
+            <button mat-icon-button (click)="removeFromUserFavorites(movie._id)">
+                <mat-icon>favorite</mat-icon>
+            </button>
+        </mat-card-header>
+    </mat-card>
+</div>

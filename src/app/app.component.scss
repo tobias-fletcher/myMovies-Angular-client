@@ -1,4 +1,19 @@
 .main-page {
     text-align: center;
     margin: auto;
+    background-color: 'gray';
 }
+
+body { 
+background-color: 'gray';
+}
+
+.customDialog .mat-dialog-container  {
+	background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:  #807e9b;
+    border-radius: 25%;  
+}
+

@@ -1,0 +1,21 @@
+<mat-card style="display: flex; justify-content: center; align-items: center">
+    <mat-card-header>
+        <mat-card-title>
+            Hello there, {{user.Username}}
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content class='card-content'>
+        <p>Email: {{user.Email}}</p>
+        <p>Birthday: {{user.Birthday}}</p>
+        <p>Username: {{user.Username}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button (click)=" openEditDialog()" color="primary">
+            Edit
+        </button>
+        <button mat-raised-button (click)="openFavoriteMovies()" color="primary">
+            Favorite Movies
+        </button>
+    </mat-card-actions>
+
+</mat-card>
