@@ -17,6 +17,14 @@ export class EditUserComponent implements OnInit {
 
   @Input() userData = { Username: '', Password: '', Email: '', Birthday: '' };
 
+  /**
+   * constructor
+   * @param fetchApiData 
+   * @param router 
+   * @param dialogRef 
+   * @param dialog 
+   * @param snackBar 
+   */
   constructor(
     public fetchApiData: FetchApiDataService,
     public router: Router,
@@ -28,6 +36,9 @@ export class EditUserComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * edits user information
+   */
 
   editUser(): void {
     this.fetchApiData.editUserInfo(this.userData).subscribe((res) => {

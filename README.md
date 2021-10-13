@@ -25,3 +25,21 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Objective
+Using Angular, build the client-side for an application called myFlix based on
+its  server-side code (REST API and database), with supporting
+documentation.
+
+Languages: Typescript; SCSS
+Framework: Angular
+Documenting: JSDoc
+Hosted: GitHub pages 
+
+Website: https://tobias-fletcher.github.io/myMovies-Angular-client/
+Server-side code: https://github.com/tobias-fletcher/horror-time
+
+
+
+
+

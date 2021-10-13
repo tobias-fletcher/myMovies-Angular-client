@@ -16,21 +16,28 @@ import { MatCardModule } from '@angular/material/card';
 export class WelcomePageComponent {
   title = 'myMovies-Angular-client';
 
+  /**
+   * Opens dialog to register user
+   * @param dialog 
+   */
   constructor(public dialog: MatDialog) { }
-  // This is the function that will open the dialog when the signup button is clicked  
   openUserRegistrationDialog(): void {
     this.dialog.open(UserRegistrationFormComponent, {
-      // Assigning the dialog a width
       width: '280px'
     });
   }
-
+  /**
+   * Opens the User dialog
+   */
   openUserLoginDialog(): void {
     this.dialog.open(UserLoginFormComponent, {
       width: '280px'
     });
   }
 
+  /**
+   * opens the movies dialog
+   */
   openMoviesDialog(): void {
     this.dialog.open(MovieCardComponent, {
     });

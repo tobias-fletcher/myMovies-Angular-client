@@ -8,6 +8,11 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrls: ['./description-view.component.scss']
 })
 export class DescriptionViewComponent implements OnInit {
+
+  /**
+   * passes data through mat dialog
+   * @param data 
+   */
   constructor(
     @Inject(MAT_DIALOG_DATA)
     public data: {

@@ -27,6 +27,12 @@ export class FavoriteMoviesComponent implements OnInit {
   movies: any[] = [];
   FavoriteMovies: any[] = [];
 
+  /**
+   * constructor
+   * @param fetchApiData 
+   * @param dialog 
+   * @param snackBar 
+   */
   constructor(
     public fetchApiData: FetchApiDataService,
     public dialog: MatDialog,
@@ -40,6 +46,10 @@ export class FavoriteMoviesComponent implements OnInit {
   }
 
 
+  /**
+   * gets list of favorite movies
+   * @returns filtered list of all movies
+   */
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
@@ -47,6 +57,9 @@ export class FavoriteMoviesComponent implements OnInit {
     })
   }
 
+  /**
+   * gets user info
+   */
   getInfo(): void {
     let user = localStorage.getItem('username');
     this.fetchApiData.getUserInfo(user).subscribe((res: any) => {
@@ -54,12 +67,21 @@ export class FavoriteMoviesComponent implements OnInit {
     });
   }
 
+  /**
+   * gets favorite movies of user
+   * @returns favorite movies
+   */
   getUsersFavs(): void {
     this.fetchApiData.getUserInfo(user).subscribe((resp: any) => {
       this.favs = resp.FavoriteMovies;
       return this.favs;
     })
   }
+
+  /**
+   * filters list of movies
+   * @returns filtered list of movies
+   */
   filterFavorites(): void {
     this.movies.forEach((movie: any) => {
       if (this.favs.includes(movie._id)) {

@@ -27,13 +27,18 @@ export class UserProfileComponent implements OnInit {
     this.getInfo();
   }
 
+  /**
+   * gets user info
+   */
   getInfo(): void {
     let user = localStorage.getItem('username');
     this.fetchApiData.getUserInfo(user).subscribe((res: any) => {
       this.user = res;
     });
   }
-
+  /**
+   * opens edit user dialog
+   */
   openEditDialog(): void {
     this.dialog.open(EditUserComponent, {
       /*width: '500px',
@@ -41,6 +46,9 @@ export class UserProfileComponent implements OnInit {
     });
   }
 
+  /**
+   * opens favorite movies dialog
+   */
   openFavoriteMovies(): void {
     this.dialog.open(FavoriteMoviesComponent, {
       panelClass: 'customDialog'

@@ -10,6 +10,11 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrls: ['./director-view.component.scss']
 })
 export class DirectorViewComponent implements OnInit {
+
+  /**
+   * passes data through mat dialog
+   * @param data 
+   */
   constructor(
 
     @Inject(MAT_DIALOG_DATA)
