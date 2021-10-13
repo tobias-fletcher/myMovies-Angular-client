@@ -62,12 +62,6 @@ export class MovieCardComponent implements OnInit {
       height: '500px',
       panelClass: 'customDialog'
     });
-    /*
-    const username = localStorage.getItem('user');
-    console.log(user);
-    this.router.navigate([`users/${user
-    }`]);*/
-
   }
 
   /**
