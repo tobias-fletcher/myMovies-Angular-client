@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
 
 const user = localStorage.getItem('username');
+const token = localStorage.getItem('token');
 
 @Component({
   selector: 'app-movie-card',
